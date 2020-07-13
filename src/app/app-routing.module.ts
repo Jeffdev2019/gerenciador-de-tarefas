@@ -1,8 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { TerefaRoutes } from './terefas';
 
-const routes: Routes = [];
+
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/terefas/listar',
+    pathMatch: 'full'
+  },
+  ...TerefaRoutes
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
